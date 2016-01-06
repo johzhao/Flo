@@ -13,6 +13,8 @@
 		D66ABE4B1C3CDC1E0037DAC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66ABE491C3CDC1E0037DAC9 /* Main.storyboard */; };
 		D66ABE4D1C3CDC1E0037DAC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66ABE4C1C3CDC1E0037DAC9 /* Assets.xcassets */; };
 		D66ABE501C3CDC1E0037DAC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66ABE4E1C3CDC1E0037DAC9 /* LaunchScreen.storyboard */; };
+		D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */; };
+		D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE5B1C3CE1330037DAC9 /* CounterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D66ABE4C1C3CDC1E0037DAC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66ABE4F1C3CDC1E0037DAC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D66ABE511C3CDC1E0037DAC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66ABE571C3CDD5F0037DAC9 /* PushButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushButtonView.h; sourceTree = "<group>"; };
+		D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushButtonView.m; sourceTree = "<group>"; };
+		D66ABE5A1C3CE1330037DAC9 /* CounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterView.h; sourceTree = "<group>"; };
+		D66ABE5B1C3CE1330037DAC9 /* CounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				D66ABE441C3CDC1E0037DAC9 /* AppDelegate.m */,
 				D66ABE461C3CDC1E0037DAC9 /* ViewController.h */,
 				D66ABE471C3CDC1E0037DAC9 /* ViewController.m */,
+				D66ABE571C3CDD5F0037DAC9 /* PushButtonView.h */,
+				D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */,
+				D66ABE5A1C3CE1330037DAC9 /* CounterView.h */,
+				D66ABE5B1C3CE1330037DAC9 /* CounterView.m */,
 				D66ABE491C3CDC1E0037DAC9 /* Main.storyboard */,
 				D66ABE4C1C3CDC1E0037DAC9 /* Assets.xcassets */,
 				D66ABE4E1C3CDC1E0037DAC9 /* LaunchScreen.storyboard */,
@@ -151,7 +161,9 @@
 			files = (
 				D66ABE481C3CDC1E0037DAC9 /* ViewController.m in Sources */,
 				D66ABE451C3CDC1E0037DAC9 /* AppDelegate.m in Sources */,
+				D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */,
 				D66ABE421C3CDC1E0037DAC9 /* main.m in Sources */,
+				D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
