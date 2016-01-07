@@ -67,6 +67,32 @@ static const CGFloat π = (CGFloat)M_PI;
 
     [self.outlineColor setStroke];
     [outlinePath stroke];
+
+    // 3. Draw the markers
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    [self.outlineColor setFill];
+
+    CGFloat markerWidth = 5.0f;
+    CGFloat markerSize = 10.0f;
+
+    UIBezierPath *markerPath = [UIBezierPath bezierPathWithRect:CGRectMake(-markerWidth/2.0f, 0.0f, markerWidth, markerSize)];
+    CGContextTranslateCTM(context, self.bounds.size.width/2.0f, self.bounds.size.height/2.0f);
+
+    for (NSInteger i=1; i<NoOfGlasses; ++i) {
+        CGContextSaveGState(context);
+
+        CGFloat angle = arcLengthPerGlass * i + startAngle - π/2.0f;
+
+        CGContextRotateCTM(context, angle);
+        CGContextTranslateCTM(context, 0, self.bounds.size.height/2.0f - markerSize);
+
+        [markerPath fill];
+
+        CGContextRestoreGState(context);
+    }
+
+    CGContextRestoreGState(context);
 }
 
 - (void)setCounter:(NSInteger)counter {

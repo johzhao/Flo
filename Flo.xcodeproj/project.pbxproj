@@ -15,6 +15,7 @@
 		D66ABE501C3CDC1E0037DAC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66ABE4E1C3CDC1E0037DAC9 /* LaunchScreen.storyboard */; };
 		D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */; };
 		D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE5B1C3CE1330037DAC9 /* CounterView.m */; };
+		D6BDBA801C3E46B5001A9000 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDBA7F1C3E46B5001A9000 /* GraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushButtonView.m; sourceTree = "<group>"; };
 		D66ABE5A1C3CE1330037DAC9 /* CounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterView.h; sourceTree = "<group>"; };
 		D66ABE5B1C3CE1330037DAC9 /* CounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterView.m; sourceTree = "<group>"; };
+		D6BDBA7E1C3E46B5001A9000 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		D6BDBA7F1C3E46B5001A9000 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */,
 				D66ABE5A1C3CE1330037DAC9 /* CounterView.h */,
 				D66ABE5B1C3CE1330037DAC9 /* CounterView.m */,
+				D6BDBA7E1C3E46B5001A9000 /* GraphView.h */,
+				D6BDBA7F1C3E46B5001A9000 /* GraphView.m */,
 				D66ABE491C3CDC1E0037DAC9 /* Main.storyboard */,
 				D66ABE4C1C3CDC1E0037DAC9 /* Assets.xcassets */,
 				D66ABE4E1C3CDC1E0037DAC9 /* LaunchScreen.storyboard */,
@@ -162,6 +167,7 @@
 				D66ABE481C3CDC1E0037DAC9 /* ViewController.m in Sources */,
 				D66ABE451C3CDC1E0037DAC9 /* AppDelegate.m in Sources */,
 				D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */,
+				D6BDBA801C3E46B5001A9000 /* GraphView.m in Sources */,
 				D66ABE421C3CDC1E0037DAC9 /* main.m in Sources */,
 				D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */,
 			);

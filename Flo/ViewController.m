@@ -9,11 +9,18 @@
 #import "ViewController.h"
 #import "PushButtonView.h"
 #import "CounterView.h"
+#import "GraphView.h"
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UIView                 *containerView;
 @property (nonatomic, weak) IBOutlet CounterView            *counterView;
 @property (nonatomic, weak) IBOutlet UILabel                *counterLabel;
+@property (nonatomic, weak) IBOutlet GraphView              *graphView;
+@property (nonatomic, weak) IBOutlet UILabel                *averageWaterDrunk;
+@property (nonatomic, weak) IBOutlet UILabel                *maxLabel;
+
+@property (nonatomic, assign) BOOL                          isGraphViewShowing;
 
 @end
 
@@ -33,9 +40,43 @@
         self.counterView.counter--;
     }
     [self updateCounterLabel];
+
+    if (self.isGraphViewShowing) {
+        [self containerViewTapped:nil];
+    }
+}
+
+- (IBAction)containerViewTapped:(UITapGestureRecognizer*)gesture {
+    if (self.isGraphViewShowing) {
+        [UIView transitionFromView:self.graphView
+                            toView:self.counterView
+                          duration:1.0
+                           options:UIViewAnimationOptionTransitionFlipFromLeft | UIViewAnimationOptionShowHideTransitionViews
+                        completion:nil];
+    }
+    else {
+        [UIView transitionFromView:self.counterView
+                            toView:self.graphView
+                          duration:1.0
+                           options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionShowHideTransitionViews
+                        completion:nil];
+        [self setupGraphDisplay];
+    }
+    self.isGraphViewShowing = !self.isGraphViewShowing;
 }
 
 #pragma mark - Private methods
+
+- (void)setupGraphDisplay {
+    self.graphView.graphPoints[self.graphView.graphPoints.count - 1] = @(self.counterView.counter);
+    [self.graphView setNeedsDisplay];
+
+    NSNumber *maxValue = [self.graphView.graphPoints valueForKeyPath:@"@max.integerValue"];
+    self.maxLabel.text = [NSString stringWithFormat:@"%ld", [maxValue integerValue]];
+
+    NSNumber *averageValue = [self.graphView.graphPoints valueForKeyPath:@"@avg.integerValue"];
+    self.averageWaterDrunk.text = [NSString stringWithFormat:@"%ld", (NSInteger)[averageValue floatValue]];
+}
 
 - (void)updateCounterLabel {
     self.counterLabel.text = [NSString stringWithFormat:@"%ld", self.counterView.counter];
