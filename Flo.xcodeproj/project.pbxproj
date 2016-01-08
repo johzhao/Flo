@@ -16,6 +16,8 @@
 		D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE581C3CDD5F0037DAC9 /* PushButtonView.m */; };
 		D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D66ABE5B1C3CE1330037DAC9 /* CounterView.m */; };
 		D6BDBA801C3E46B5001A9000 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDBA7F1C3E46B5001A9000 /* GraphView.m */; };
+		D6BDBA831C3E65C2001A9000 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDBA821C3E65C2001A9000 /* BackgroundView.m */; };
+		D6BDBA8A1C3F4AAC001A9000 /* MedalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDBA891C3F4AAC001A9000 /* MedalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,11 @@
 		D66ABE5B1C3CE1330037DAC9 /* CounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterView.m; sourceTree = "<group>"; };
 		D6BDBA7E1C3E46B5001A9000 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		D6BDBA7F1C3E46B5001A9000 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		D6BDBA811C3E65C2001A9000 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		D6BDBA821C3E65C2001A9000 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		D6BDBA841C3E6D03001A9000 /* MedalDrawing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MedalDrawing.playground; sourceTree = "<group>"; };
+		D6BDBA881C3F4AAC001A9000 /* MedalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedalView.h; sourceTree = "<group>"; };
+		D6BDBA891C3F4AAC001A9000 /* MedalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedalView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,11 @@
 				D66ABE5B1C3CE1330037DAC9 /* CounterView.m */,
 				D6BDBA7E1C3E46B5001A9000 /* GraphView.h */,
 				D6BDBA7F1C3E46B5001A9000 /* GraphView.m */,
+				D6BDBA811C3E65C2001A9000 /* BackgroundView.h */,
+				D6BDBA821C3E65C2001A9000 /* BackgroundView.m */,
+				D6BDBA841C3E6D03001A9000 /* MedalDrawing.playground */,
+				D6BDBA881C3F4AAC001A9000 /* MedalView.h */,
+				D6BDBA891C3F4AAC001A9000 /* MedalView.m */,
 				D66ABE491C3CDC1E0037DAC9 /* Main.storyboard */,
 				D66ABE4C1C3CDC1E0037DAC9 /* Assets.xcassets */,
 				D66ABE4E1C3CDC1E0037DAC9 /* LaunchScreen.storyboard */,
@@ -164,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BDBA831C3E65C2001A9000 /* BackgroundView.m in Sources */,
 				D66ABE481C3CDC1E0037DAC9 /* ViewController.m in Sources */,
 				D66ABE451C3CDC1E0037DAC9 /* AppDelegate.m in Sources */,
 				D66ABE591C3CDD5F0037DAC9 /* PushButtonView.m in Sources */,
+				D6BDBA8A1C3F4AAC001A9000 /* MedalView.m in Sources */,
 				D6BDBA801C3E46B5001A9000 /* GraphView.m in Sources */,
 				D66ABE421C3CDC1E0037DAC9 /* main.m in Sources */,
 				D66ABE5C1C3CE1330037DAC9 /* CounterView.m in Sources */,

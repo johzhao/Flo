@@ -16,6 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-SD-gUo" customClass="BackgroundView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="1" green="1" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                                        <color key="value" red="0.87450980392156863" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2F-sh-75P">
                                 <rect key="frame" x="150" y="50" width="300" height="300"/>
                                 <subviews>
@@ -34,12 +49,21 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-6x-rtr" customClass="MedalView">
+                                                <rect key="frame" x="75" y="147" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="VTp-gN-KLg"/>
+                                                    <constraint firstAttribute="height" constant="80" id="o1x-Mo-u91"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="230" id="4Kp-Uf-5pn"/>
                                             <constraint firstItem="O4l-yK-0f8" firstAttribute="centerY" secondItem="s8X-hZ-dNM" secondAttribute="centerY" id="5zR-6J-o0a"/>
                                             <constraint firstAttribute="width" constant="230" id="AQi-RJ-51K"/>
+                                            <constraint firstAttribute="bottom" secondItem="B5d-6x-rtr" secondAttribute="bottom" constant="3" id="La4-1a-elt"/>
+                                            <constraint firstItem="B5d-6x-rtr" firstAttribute="centerX" secondItem="s8X-hZ-dNM" secondAttribute="centerX" id="SIc-uN-x6e"/>
                                             <constraint firstItem="O4l-yK-0f8" firstAttribute="centerX" secondItem="s8X-hZ-dNM" secondAttribute="centerX" id="lcJ-gJ-IlQ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -166,8 +190,12 @@
                             <constraint firstItem="v2F-sh-75P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSS-w9-WZQ"/>
                             <constraint firstItem="6CL-TG-Ro3" firstAttribute="top" secondItem="26I-fr-do5" secondAttribute="bottom" constant="30" id="HZt-9Q-PEN"/>
                             <constraint firstItem="26I-fr-do5" firstAttribute="top" secondItem="v2F-sh-75P" secondAttribute="bottom" id="Qbo-8R-K17"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c4u-SD-gUo" secondAttribute="bottom" id="a9a-21-Nj4"/>
+                            <constraint firstItem="c4u-SD-gUo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bau-6h-R3r"/>
                             <constraint firstItem="26I-fr-do5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bni-xK-UKG"/>
                             <constraint firstItem="v2F-sh-75P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="eMw-4i-6re"/>
+                            <constraint firstItem="c4u-SD-gUo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="grY-Ph-Xof"/>
+                            <constraint firstAttribute="trailing" secondItem="c4u-SD-gUo" secondAttribute="trailing" id="wui-gn-kR9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -177,6 +205,7 @@
                         <outlet property="counterView" destination="s8X-hZ-dNM" id="ifo-H9-P38"/>
                         <outlet property="graphView" destination="i4d-NL-sGk" id="3QU-m9-yDO"/>
                         <outlet property="maxLabel" destination="e9q-zo-Wv7" id="QUf-AI-tjp"/>
+                        <outlet property="medalView" destination="B5d-6x-rtr" id="6y4-8X-kq9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -186,6 +215,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="342" y="377"/>
         </scene>
     </scenes>
 </document>

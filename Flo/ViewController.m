@@ -10,6 +10,7 @@
 #import "PushButtonView.h"
 #import "CounterView.h"
 #import "GraphView.h"
+#import "MedalView.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
 @property (nonatomic, weak) IBOutlet GraphView              *graphView;
 @property (nonatomic, weak) IBOutlet UILabel                *averageWaterDrunk;
 @property (nonatomic, weak) IBOutlet UILabel                *maxLabel;
+@property (nonatomic, weak) IBOutlet MedalView              *medalView;
 
 @property (nonatomic, assign) BOOL                          isGraphViewShowing;
 
@@ -44,6 +46,8 @@
     if (self.isGraphViewShowing) {
         [self containerViewTapped:nil];
     }
+
+    [self checkTotal];
 }
 
 - (IBAction)containerViewTapped:(UITapGestureRecognizer*)gesture {
@@ -80,6 +84,15 @@
 
 - (void)updateCounterLabel {
     self.counterLabel.text = [NSString stringWithFormat:@"%ld", self.counterView.counter];
+}
+
+- (void)checkTotal {
+    if (self.counterView.counter >= 8) {
+        [self.medalView showMedal:YES];
+    }
+    else {
+        [self.medalView showMedal:NO];
+    }
 }
 
 @end
